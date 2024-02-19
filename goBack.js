@@ -34,8 +34,4 @@ export const goBack = async () => {
             wbAppGoBack();
 
             return;
-        }
-
-        window.history.go(-1);
-    }
 };
