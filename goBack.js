@@ -1,9 +1,9 @@
 import { APP_ACTION_RESPONSE_CODE } from '@/configs/appConfig';
 import { PAGE_OPEN_TYPE, PAGE_OPEN_TYPE_KEY } from '@/configs/const';
-import { closeWebView, goBack } from '@/utils/nativeBridge/auntAppUtils';
+import { closeWebView, goBack as auntAppGoback } from '@/utils/nativeBridge/auntAppUtils';
 import { wbAppGoBack } from '@/utils/nativeBridge/wbAppUtils';
 import { is58App, isAuntApp } from '@/utils/osUtil';
-import { getUrlQuery } from '@/utils/urlUtil'
+import { getUrlQuery } from '@/utils/urlUtil';
 /**
  * @description 用法用于返回上一页
  * @summary
@@ -20,8 +20,6 @@ export const goBack = async () => {
 
         if (openType === PAGE_OPEN_TYPE.GO_PAGE) {
             window.history.go(-1);
-
-            return;
         }
 
         if (isAuntApp() && openType === PAGE_OPEN_TYPE.OPEN_WEBVIEW) {
