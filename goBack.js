@@ -22,6 +22,8 @@ export const goBack = async () => {
             window.history.go(-1);
         }
 
+        return;
+
         if (isAuntApp() && openType === PAGE_OPEN_TYPE.OPEN_WEBVIEW) {
             closeWebView();
 
