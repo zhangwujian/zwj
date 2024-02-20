@@ -102,7 +102,6 @@ export default {
             this.cityName = getUrlQuery('cityName') || '';
             this.auntAreaDistInfo = getUrlQuery('auntAreaDistInfo') ? JSON.parse(getUrlQuery('auntAreaDistInfo')) : [];
             this.backfillInfo = getUrlQuery('backfillInfo') ? JSON.parse(getUrlQuery('backfillInfo')) : '';
-            this.initDistInfo();
         },
         async initDistInfo() {
             try {
