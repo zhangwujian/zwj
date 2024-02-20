@@ -34,4 +34,6 @@ export const goBack = async () => {
             wbAppGoBack();
 
             return;
+        }
+    }
 };
